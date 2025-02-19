@@ -11,11 +11,11 @@ parser.add_argument('--pretrained-model', default='bert-base-uncased', type=str,
                     help='path to pretrained model')
 parser.add_argument('--task', default='wn18rr', type=str, metavar='N',
                     help='dataset name')
-parser.add_argument('--train-path', default='/home/horanchen/ydy/study/code/4transductive/data/WN18RR/train.txt.json', type=str, metavar='N',
+parser.add_argument('--train-path', default='data/WN18RR/train.txt.json', type=str, metavar='N',
                     help='path to training data')
-parser.add_argument('--valid-path', default='/home/horanchen/ydy/study/code/4transductive/data/WN18RR/valid.txt.json', type=str, metavar='N',
+parser.add_argument('--valid-path', default='data/WN18RR/valid.txt.json', type=str, metavar='N',
                     help='path to valid data')
-parser.add_argument('--model-dir', default='/home/horanchen/ydy/study/code/4transductive/data/WN18RR/checkpoint_runtime/', type=str, metavar='N',
+parser.add_argument('--model-dir', default='data/WN18RR/checkpoint/', type=str, metavar='N',
                     help='path to model dir')
 parser.add_argument('--warmup', default=400, type=int, metavar='N',
                     help='warmup steps')
@@ -77,7 +77,7 @@ parser.add_argument('--rerank-n-hop', default=2, type=int,
                     help='use n-hops node for re-ranking entities, only used during evaluation')
 parser.add_argument('--neighbor-weight', default=0.02, type=float,
                     help='weight for re-ranking entities')
-parser.add_argument('--eval-model-path', default='/home/horanchen/ydy/study/code/4transductive/data/WN18RR/checkpoint_runtime/model_best.mdl', type=str, metavar='N',
+parser.add_argument('--eval-model-path', default='data/WN18RR/checkpoint/model_best.mdl', type=str, metavar='N',
                     help='path to model, only used for evaluation')
 
 args = parser.parse_args()
