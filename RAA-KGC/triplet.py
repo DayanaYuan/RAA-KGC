@@ -97,7 +97,6 @@ class LinkGraph:
         neighbor_ids = self.graph.get(entity_id, set())
         return sorted(list(neighbor_ids))[:max_to_keep]
 
-    # 这段代码用于获取给定实体的 n_hop 跳数内的所有实体索引集合。以下是代码的解释：
     def get_n_hop_entity_indices(self, entity_id: str,
                                  entity_dict: EntityDict,
                                  n_hop: int = 2,
@@ -121,44 +120,6 @@ class LinkGraph:
                         if len(seen_eids) > max_nodes:
                             return set()
         return set([entity_dict.entity_to_idx(e_id) for e_id in seen_eids])
-'''
-        # seen_eids集合包含了通过广度优先搜索（BFS）从给定的entity_id开始，在n跳范围内访问到的所有实体的索引。
-        如果seen_eids的大小超过了max_nodes，函数会提前返回一个空集合set()。否则，最终返回的是一个包含转换后的索引的集合。
-        
-        # get_n_hop_entity_indices 方法接受四个参数：
-        # entity_id：要查询的实体的 ID。
-        # entity_dict：实体字典，用于将实体 ID 转换为索引。
-        # n_hop：要搜索的跳数，默认为 2。
-        # max_nodes：如果结果集超过此数目，则返回空集，默认为 100000。
-        # 如果 n_hop 小于 0，则直接返回空集。
-        
-        seen_eids = set()
-        seen_eids.add(entity_id)
-        queue = deque([entity_id])
-        for i in range(n_hop):
-            len_q = len(queue)
-            for _ in range(len_q):
-                tp = queue.popleft()
-                a = self.graph.get(tp, set())
-                for node in self.graph.get(tp, set()):
-                    if node not in seen_eids:
-                        queue.append(node)
-                        seen_eids.add(node)
-                        if len(seen_eids) > max_nodes:
-                            return set()
-        return set([entity_dict.entity_to_idx(e_id) for e_id in seen_eids])
-'''
-'''
-创建一个空集 seen_eids，用于存储已经访问过的实体 ID。将给定的 entity_id 添加到 seen_eids 中，并将其放入双向队列 queue 中。
-循环遍历 n_hop 次，每次遍历时：
-    获取当前队列的长度 len_q。
-    对当前队列中的每个实体进行以下操作：
-        弹出队列的第一个元素，并将其存储在变量 tp 中。
-        遍历 tp 对应的图中的节点集合，对于每个节点 node：
-            如果 node 没有被访问过，则将其添加到队列 queue 中，并将其 ID 添加到 seen_eids 中。
-            如果 seen_eids 中的实体数量超过了 max_nodes，则直接返回空集。
-遍历完成后，返回所有已访问实体的索引集合，其中实体 ID 通过 entity_dict 转换为索引。
-'''
 
 def reverse_triplet(obj):
     return {
