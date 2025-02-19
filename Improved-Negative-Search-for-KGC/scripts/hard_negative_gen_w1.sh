@@ -41,8 +41,8 @@ python3 -u gen_hard_negatives.py \
 --task "${task}" \
 --is-test \
 --batch-size 1024 \
---eval-model-path "/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/WN18RR_v1/checkpoint/model_best.mdl" \
+--eval-model-path "WN18RR_v1/checkpoint/model_best.mdl" \
 --neighbor-weight "${neighbor_weight}" \
 --rerank-n-hop "${rerank_n_hop}" \
---train-path "/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/WN18RR_v1/train.txt.json" \
---valid-path "/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/WN18RR_v1/valid.txt.json" "$@"
+--train-path "WN18RR_v1/train.txt.json" \
+--valid-path "WN18RR_v1/valid.txt.json" "$@"
