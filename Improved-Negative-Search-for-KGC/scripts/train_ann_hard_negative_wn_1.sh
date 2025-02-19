@@ -16,13 +16,13 @@ if [ -z "$DATA_DIR" ]; then
 fi
 
 python3 -u main.py \
---model-dir "/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/WN18RR_v1/checkpoint/wn18rr_tail_entity_2hop_neighbours_hard_negative_1pos1neg/" \
+--model-dir "WN18RR_v1/checkpoint/wn18rr_tail_entity_2hop_neighbours_hard_negative_1pos1neg/" \
 --pretrained-model bert-base-uncased \
 --pooling mean \
 --lr 5e-5 \
 --use-link-graph \
---train-path "/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/WN18RR_v1/train.forward.ann.hard.negative.tail.entity.2hop.neighbours.json,/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/WN18RR_v1/train.backward.ann.hard.negative.tail.entity.2hop.neighbours.json" \
---valid-path "/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/WN18RR_v1/valid.forward.ann.hard.negative.top30.json,/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/WN18RR_v1/valid.backward.ann.hard.negative.top30.json" \
+--train-path "WN18RR_v1/train.forward.ann.hard.negative.tail.entity.2hop.neighbours.json,WN18RR_v1/train.backward.ann.hard.negative.tail.entity.2hop.neighbours.json" \
+--valid-path "WN18RR_v1/valid.forward.ann.hard.negative.top30.json,WN18RR_v1/valid.backward.ann.hard.negative.top30.json" \
 --task WN18RR \
 --batch-size 32 \
 --print-freq 20 \
