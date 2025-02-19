@@ -12,11 +12,11 @@ parser.add_argument('--pretrained-model', default='bert-base-uncased', type=str,
                     help='path to pretrained model')
 parser.add_argument('--task', default='wn18rr', type=str, metavar='N',
                     help='dataset name')
-parser.add_argument('--train-path', default="/home/horanchen/ydy/study/code/5Improved-Negative-neibor/WN18RR_v1/train.txt.json" , type=str, metavar='N',
+parser.add_argument('--train-path', default="WN18RR_v1/train.txt.json" , type=str, metavar='N',
                     help='path to training data')
-parser.add_argument('--valid-path', default="/home/horanchen/ydy/study/code/5Improved-Negative-neibor/WN18RR_v1/test.txt.json" , type=str, metavar='N',
+parser.add_argument('--valid-path', default="WN18RR_v1/test.txt.json" , type=str, metavar='N',
                     help='path to valid data')
-parser.add_argument('--model-dir', default='/home/horanchen/ydy/study/code/5Improved-Negative-neibor/WN18RR_v1/checkpoint50/wn18rr_tail_entity_2hop_neighbours_hard_negative_1pos1neg/', type=str, metavar='N',
+parser.add_argument('--model-dir', default='WN18RR_v1/checkpoint50/wn18rr_tail_entity_2hop_neighbours_hard_negative_1pos1neg/', type=str, metavar='N',
                     help='path to model dir')
 parser.add_argument('--warmup', default=400, type=int, metavar='N',
                     help='warmup steps')
@@ -78,7 +78,7 @@ parser.add_argument('--rerank-n-hop', default=5, type=int,
                     help='use n-hops node for re-ranking entities, only used during evaluation')
 parser.add_argument('--neighbor-weight', default=0.05, type=float,
                     help='weight for re-ranking entities')
-parser.add_argument('--eval-model-path', default='/home/horanchen/ydy/study/code/5Improved-Negative-neibor/WN18RR_v1/checkpoint50/wn18rr_tail_entity_2hop_neighbours_hard_negative_1pos1neg/model_best.mdl', type=str, metavar='N',
+parser.add_argument('--eval-model-path', default='WN18RR_v1/checkpoint50/wn18rr_tail_entity_2hop_neighbours_hard_negative_1pos1neg/model_best.mdl', type=str, metavar='N',
                     help='path to model, only used for evaluation')
 
 parser.add_argument('--use-hard-negative', action='store_true',
