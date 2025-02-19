@@ -37,12 +37,12 @@ if [ "${task}" = "wiki5m_ind" ]; then
   neighbor_weight=0.0
 fi
 
-python3 -u /home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/gen_hard_negatives.py \
+python3 -u gen_hard_negatives.py \
 --task "FB15k237" \
 --is-test \
 --batch-size 64 \
---eval-model-path "/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/fb237_v1/checkpoint/model_best.mdl" \
+--eval-model-path "fb237_v1/checkpoint/model_best.mdl" \
 --neighbor-weight "${neighbor_weight}" \
 --rerank-n-hop "${rerank_n_hop}" \
---train-path "/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/fb237_v1/train.txt.json" \
---valid-path "/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/fb237_v1/valid.txt.json" "$@"
+--train-path "fb237_v1/train.txt.json" \
+--valid-path "fb237_v1/valid.txt.json" "$@"
