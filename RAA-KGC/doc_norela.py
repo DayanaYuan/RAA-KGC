@@ -164,7 +164,7 @@ class Dataset(torch.utils.data.dataset.Dataset):
             # print('len(self.examples[index])={}'.format(len(self.examples[index])))
             return self.examples[index].vectorize(test=True)
         else:
-            related_triplets = self.get_norelated_triplets(example.head_id, example.relation, example.tail_id)
+            related_triplets = self.get_related_triplets(example.head_id, example.relation, example.tail_id)
             if len(related_triplets) == 0:
                 related_triplets_vectorized = [example_vectorized]
                 return {
