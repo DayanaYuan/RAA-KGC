@@ -9,3 +9,5 @@ For WN18RR and FB15k237 datasets, we use files from [SimKGC](https://github.com/
 For Wikidata5M transductive dataset, we provide a script to download the Wikidata5M dataset from its official website. This will download data for both transductive and inductive settings. The dataset can be found at [Wikidata5M](https://deepgraphlearning.github.io/project/wikidata5m "Wikidata5M Project").
 
 The model we are using is bert-base-uncased.
+
+If you have any questions about the code, please contact Duanyang Yuan (ydy_n1@nudt.edu.cn)
