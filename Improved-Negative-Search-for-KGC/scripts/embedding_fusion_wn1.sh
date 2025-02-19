@@ -38,5 +38,5 @@ python3 -u embedding_fusion.py \
 --is-test \
 --neighbor-weight "${neighbor_weight}" \
 --rerank-n-hop "${rerank_n_hop}" \
---train-path "/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/WN18RR_v1/train.txt.json" \
---valid-path "/home/horanchen/ydy/study/code/5Improved-Negative-Search-for-KGC/data/WN18RR_v1/test.txt.json" "$@"
+--train-path "WN18RR_v1/train.txt.json" \
+--valid-path "WN18RR_v1/test.txt.json" "$@"
