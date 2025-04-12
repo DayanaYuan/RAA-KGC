@@ -41,14 +41,17 @@ If you have any questions about the code, please contact Duanyang Yuan (ydy_n1@n
 If you find our paper or code repository helpful, please consider citing as follows:
 
 ```
-@misc{yuan2025knowledgegraphcompletionrelationaware,
-      title={Knowledge Graph Completion with Relation-Aware Anchor Enhancement}, 
-      author={Duanyang Yuan and Sihang Zhou and Xiaoshu Chen and Dong Wang and Ke Liang and Xinwang Liu and Jian Huang},
-      year={2025},
-      eprint={2504.06129},
-      archivePrefix={arXiv},
-      primaryClass={cs.IR},
-      url={https://arxiv.org/abs/2504.06129}, 
+@article{Yuan_Zhou_Chen_Wang_Liang_Liu_Huang_2025,
+      title={Knowledge Graph Completion with Relation-Aware Anchor Enhancement},
+      volume={39},
+      url={https://ojs.aaai.org/index.php/AAAI/article/view/33672},
+      DOI={10.1609/aaai.v39i14.33672}, 
+      number={14},
+      journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+      author={Yuan, Duanyang and Zhou, Sihang and Chen, Xiaoshu and Wang, Dong and Liang, Ke and Liu, Xinwang and Huang, Jian},
+       year={2025},
+      month={Apr.},
+      pages={15239-15247}
 }
 ```
 
