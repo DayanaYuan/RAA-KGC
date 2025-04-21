@@ -3,7 +3,7 @@
 Official code repository for AAAI-25 paper
 **["Knowledge Graph Completion with Relation-Aware Anchor Enhancement"](https://arxiv.org/pdf/2504.06129)**
 
-The paper is available at: [[https://aclanthology.org/2022.acl-long.295.pdf](https://aclanthology.org/2022.acl-long.295.pdf)]
+The paper is available at: [[[https://aclanthology.org/2022.acl-long.295.pdf](https://aclanthology.org/2022.acl-long.295.pdf)](https://arxiv.org/pdf/2504.06129)]
 
 ---
 ![RAA-KGC Architecture](raa-kgc.png)
